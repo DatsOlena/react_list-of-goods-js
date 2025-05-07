@@ -22,7 +22,7 @@ export const App = () => {
 
   const visibleGoods = [...goodsFromServer].sort((good1, good2) => {
     switch (sortField) {
-      case 'alphabeticlly':
+      case 'alphabetically':
         return good1.localeCompare(good2);
       case 'length':
         return good1.length - good2.length;
@@ -40,8 +40,8 @@ export const App = () => {
       <div className="buttons">
         <button
           type="button"
-          className={`button is-info ${sortField === 'alphabeticlly' ? '' : 'is-light'}`}
-          onClick={() => setSortField('alphabeticlly')}
+          className={`button is-info ${sortField === 'alphabetically' ? '' : 'is-light'}`}
+          onClick={() => setSortField('alphabetically')}
         >
           Sort alphabetically
         </button>
